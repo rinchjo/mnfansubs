@@ -57,11 +57,11 @@ body {
   display: grid;
   width: 100%;
   margin-top: 20px;
-  grid-template-columns: repeat(4, 276px);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
-  row-gap: 20px;
+  gap: 1rem;
 }
-.container .wrapper .box {
+.box {
   height: 190px;
   border: #393939 solid 1px;
   border-radius: 15px;
@@ -69,10 +69,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  position: relative;
 }
+
 .text {
-  display: flex;
-  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
   color: white;
 }
 .button {
@@ -92,4 +94,29 @@ body {
 .banner{
     width: max-content;
     margin: auto;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+height: 268px;
+margin: 25px 0px 5px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
