@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 5px;
+}
+.wrapper1 {
+  width: 430px;
+  height: 350px;
+  background-color: slategray;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 28px 4px #000000ab;
+  animation: rotate3 0.5s ease-out 0s normal none;
+}
+@keyframes rotate1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-170px) rotate(-100deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+
+
+.wrapper2 {
+  width: 430px;
+  height: 350px;
+  background-color: slategray;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  animation: rotate3 0.5s ease-out 0s normal none;  
+}
+@keyframes rotate2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+.wrapper3 {
+  width: 430px;
+  height: 350px;
+  background-color: slategray;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.67);
+  animation: rotate3 0.5s ease-out 0s normal none;
+}
+@keyframes rotate3 {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+.text {
+  text-align: center;
+  height: 230px;
+  width: 350px;
+  position: absolute;
+  top: 90px;
+}
+p {
+  margin-top: 5px;
+  text-align: justify;
+}
+img {
+  position: absolute;
+  border-radius: 50%;
+  top: -25%;
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
