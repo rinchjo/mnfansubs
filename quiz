@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+// Quiz App
+function Quiz(question, answers, correctAnswer) {
+  this.question = question;
+  this.answers = answers;
+  this.correctAnswer = correctAnswer;
+}
+
+Quiz.prototype.showQuestion = function () {
+  console.log(this.question);
+  this.answers.forEach((answer, index) => {
+    console.log(index + ": " + answer);
+  });
+};
+
+Quiz.prototype.checkAnswer = function (ans) {
+  if (this.correctAnswer === +ans) {
+    console.log("Зөв байна. баяр хүргэе...");
+    return 1;
+  }
+  console.log("Буруу байна... Дахин оролоно уу...");
+  return 0;
+};
+
+const q1 = new Quiz("Монгол улс хэдэн аймагтай вэ?", [19, 20, 21, 22], 2);
+const q2 = new Quiz("Улаанбаатар хэдэн дүүрэгтэй вэ?", [6, 7, 8, 9], 3);
+const q3 = new Quiz("Монгол улс хэдэн сумтай вэ?", [361, 21, 9, 360], 0);
+const q4 = new Quiz("Монгол орны хойд хөрш ямар улс вэ?",["Хятад", "Солонгос", "Казакстан", "ОХУ"],3);
+const q5 = new Quiz("Монгол орны хамгийн өндөр цэг хэдэн метр вэ?", [8864, 6678, 4374, 5618],2);
+
+// q1.showQuestion();
+// q1.checkAnswer(prompt("Зөв хариултыг сонго..."));
+const questions = [q1, q2, q3, q4, q5];
+
+var onoo = 0;
+questions.forEach(function (quiz, index) {
+  console.log(index + 1 + "-р асуулт");
+  quiz.showQuestion();
+  onoo += quiz.checkAnswer(prompt("Зөв хариултыг сонго..."));
+});
+
+console.log("Та " + onoo + " асуултанд зөв хариуллаа");
+
+
+
+</script>
+</body>
+
+</html>
